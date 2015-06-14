@@ -9,7 +9,7 @@ angular.module('home').config(function($stateProvider) {
         data: {
           pageTitle: 'Home',
         }
-      })
+      });
 
     /* Add New States Above */
 

@@ -40,5 +40,5 @@ angular.module('mySite').controller('AppCtrl',function($scope){
         twitter: "https://twitter.com/ryanmilstead",
         email: "mailto:ryanmilstead1@gmail.com",
         linkedin: "https://www.linkedin.com/in/ryanmilstead",
-    }
+    };
 });
