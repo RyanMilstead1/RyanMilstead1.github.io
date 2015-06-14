@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="mySite">
 <head>
-  <title></title>
+  <title ng-bind="pageTitle"></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
   <link href="app.less" type="text/css" rel="stylesheet/less">
@@ -28,14 +28,36 @@
 
   <!-- Main App JS -->
   <script src="app.js"></script>
+  <script src="app/home/home.js"></script>
+  <script src="app/home/partial/home/home.js"></script>
+  <script src="app/about/about.js"></script>
+  <script src="app/contact/contact.js"></script>
+  <script src="app/about/partial/about/about.js"></script>
+  <script src="app/contact/partial/contact/contact.js"></script>
   <!-- Add New Component JS Above -->
 
-  <div>
+  <div ng-controller="AppCtrl">
+    <div id="site-logo">
+      <button class="btn btn-default dropdown-toggle"><img src="img/tempLogo.gif" height="50" width="50" alt="">Ryan Milstead <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li ng-repeat="choice in nav">
+          <a ui-sref="{{choice.route}}">{{choice.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <ul id="social-icons">
+      <li class="fade"><a ng-href="{{socialLinks.facebook}}"><i class="fa fa-facebook-official fa-4x"></i></a></li>
+      <li class="fade"><a ng-href="{{socialLinks.twitter}}"><i class="fa fa-twitter-square fa-4x"></i></a></li>
+      <li class="fade"><a ng-href="{{socialLinks.email}}"><i class="fa fa-at fa-4x"></i></a></li>
+      <li class="fade"><a ng-href="{{socialLinks.linkedin}}"><i class="fa fa-linkedin-square fa-4x"></i></a></li>
+    </ul>
     <div id="content" class="container">
       <div class="row">
         <div ui-view>
         </div>
       </div>
+      <hr>
+      <footer class="text-center">Copyright © 2015 Ryan Milstead </footer>
     </div>
   </div>
 

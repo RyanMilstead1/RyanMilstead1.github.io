@@ -18,6 +18,20 @@
         "marker": "/* Add Component LESS Above */",
         "template": "@import \"<%= filename %>\";"
       }
-    }
+    },
+    "modules": [
+      {
+        "name": "home",
+        "file": "app/home/home.js"
+      },
+      {
+        "name": "about",
+        "file": "app/about/about.js"
+      },
+      {
+        "name": "contact",
+        "file": "app/contact/contact.js"
+      }
+    ]
   }
 }

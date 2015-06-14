@@ -4,6 +4,9 @@
 @fa-font-path: "bower_components/font-awesome/fonts";
 
 /* Component LESS */
+@import "app/home/home.less";
+@import "app/about/about.less";
+@import "app/contact/contact.less";
 /* Add Component LESS Above */
 
 /* Required for Angular UI Bootstrap */
@@ -20,3 +23,54 @@
 //		.translate(0,0);
 //	}
 //}
+
+body {
+    font-family: "Open Sans";
+}
+
+#site-logo {
+    margin: 30px 0 0 30px;
+    position: fixed;
+    z-index: 2;
+    button {
+        font-size: 18px;
+        border-radius: 0;
+        background-color: black;
+        color: white;
+    }
+}
+
+#social-icons {
+    list-style-type: none;
+    position: fixed;
+    margin-top: 120px;
+    z-index: 1;
+
+    li {
+        margin-top: 5px;
+    }
+
+    i {
+        color: black;
+    }
+}
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.5;
+}
+
+.container {
+    width: 760px;
+    padding-top: 100px;
+}
+
+footer {
+    color: grey;
+}
