@@ -27,7 +27,9 @@ angular.module('mySite').run(function($rootScope) {
 
 });
 
-angular.module('mySite').controller('AppCtrl',function($scope){
+angular.module('mySite').controller('AppCtrl',function($scope, $window){
+
+    $scope.atTop = true;
 
     $scope.nav = [
         {route: "home", name: "Home"},
@@ -40,5 +42,18 @@ angular.module('mySite').controller('AppCtrl',function($scope){
         twitter: "https://twitter.com/ryanmilstead",
         email: "mailto:ryanmilstead1@gmail.com",
         linkedin: "https://www.linkedin.com/in/ryanmilstead",
+    };
+});
+
+angular.module('mySite').directive("scroll", function ($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+             if (this.pageYOffset >= 50) {
+                 scope.atTop = false;
+             } else {
+                 scope.atTop = true;
+             }
+            scope.$apply();
+        });
     };
 });

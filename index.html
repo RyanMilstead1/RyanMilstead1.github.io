@@ -38,12 +38,18 @@
 
   <div ng-controller="AppCtrl">
     <div id="site-logo">
-      <button class="btn btn-default dropdown-toggle"><img src="img/tempLogo.gif" height="50" width="50" alt="">Ryan Milstead <span class="caret"></span></button>
+      <button class="btn btn-default dropdown-toggle"><img src="img/tempLogo.png" height="50" width="50" alt="">Ryan Milstead <span class="caret"></span></button>
       <ul class="dropdown-menu">
         <li ng-repeat="choice in nav">
           <a ui-sref="{{choice.route}}">{{choice.name}}</a>
         </li>
       </ul>
+    </div>
+    <div id="my-info" scroll ng-class="atTop ? 'solid' : 'opaque'">
+      <img src="img/profile-image.png" alt="" id="profile-image"><br>
+      <h4>Ryan Milstead</h4>
+      <hr>
+      <p>Former opera singer /<br> full time Ruby dev</p>
     </div>
     <ul id="social-icons">
       <li class="fade"><a ng-href="{{socialLinks.facebook}}"><i class="fa fa-facebook-official fa-4x"></i></a></li>
@@ -56,9 +62,9 @@
         <div ui-view>
         </div>
       </div>
-      <hr>
-      <footer class="text-center">Copyright © 2015 Ryan Milstead </footer>
     </div>
+    <hr>
+    <footer class="text-center">Copyright © 2015 Ryan Milstead </footer>
   </div>
 
 </body>
