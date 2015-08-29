@@ -21,6 +21,6 @@
     "angular-bootstrap": "~0.10",
     "moment": "~2.5",
     "less.js": "~1.6",
-    "font-awesome": "~4.3"
+    "font-awesome": "~4.4"
   }
 }
