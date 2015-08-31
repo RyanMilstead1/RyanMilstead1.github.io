@@ -59,16 +59,39 @@ body {
     .fade {
         margin-top: 5px;
         opacity: 1;
-        transition: opacity .25s ease-in-out;
-        -moz-transition: opacity .25s ease-in-out;
-        -webkit-transition: opacity .25s ease-in-out;
-
-        &:hover {
-            opacity: 0.5;
-        }
 
         a {
             color: black;
+
+            &:hover {
+                transition: color .25s ease-in-out;
+                -moz-transition: color .25s ease-in-out;
+                -webkit-transition: color .25s ease-in-out;
+            }
+        }
+
+        #twitter:hover {
+            color: #659FCB;
+        }
+
+        #email:hover {
+            color: blue;
+        }
+
+        #linkedin:hover {
+            color: #0077B5;
+        }
+
+        #github:hover {
+            color: #686868;
+        }
+
+        #facebook:hover {
+            color: #46629E;
+        }
+
+        #youtube:hover {
+            color: #D11F1F;
         }
     }
 }
@@ -87,20 +110,6 @@ body {
             border-radius: 100px;
         }
     }
-}
-
-.solid {
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-}
-
-.opaque {
-    opacity: 0.5;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
 }
 
 .container {
