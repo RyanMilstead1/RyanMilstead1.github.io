@@ -1,4 +1,4 @@
-angular.module('mySite', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'home', 'about', 'contact']);
+angular.module('mySite', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'youtube-embed','home', 'about', 'contact']);
 
 angular.module('mySite').config(function($stateProvider, $urlRouterProvider) {
 
@@ -50,6 +50,7 @@ angular.module('mySite').controller('AppCtrl',function($scope, $window){
 angular.module('mySite').directive("scroll", function ($window) {
     return function(scope, element, attrs) {
         angular.element($window).bind("scroll", function() {
+            console.log(this.pageYOffset);
              if (this.pageYOffset >= 50) {
                  scope.atTop = false;
              } else {
