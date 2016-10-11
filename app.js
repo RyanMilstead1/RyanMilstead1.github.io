@@ -1,4 +1,4 @@
-angular.module('mySite', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'youtube-embed','home', 'about', 'contact']);
+angular.module('mySite', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'youtube-embed', 'home', 'about', 'contact', 'projects']);
 
 angular.module('mySite').config(function($stateProvider, $urlRouterProvider) {
 
@@ -34,6 +34,7 @@ angular.module('mySite').controller('AppCtrl',function($scope, $window){
     $scope.nav = [
         {route: "home", name: "Home"},
         {route: "about", name: "About"},
+        {route: "projects", name: "Portfolio"},
         {route: "contact", name: "Contact"},
     ];
 

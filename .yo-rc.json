@@ -31,6 +31,10 @@
       {
         "name": "contact",
         "file": "app/contact/contact.js"
+      },
+      {
+        "name": "projects",
+        "file": "app/projects/projects.js"
       }
     ]
   }
